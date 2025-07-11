@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+     <link rel="stylesheet" href="style.css">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar-container">
+            <a href="#" class="logo"><img src="Group 206.png">Wooden Dreams</a>
+            <div class="nav-links">
+                <a href="index.html" > Home </a>
+                <a href="about.html">About Us</a>
+                <a href="categories.html">Categories</a>
+                <a href="shop.html" class="active">Shop</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="icons">
+                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href=""><i class="fa-regular fa-heart"></i></a>
+            </div>
+                 <button class="login-btn" onclick="openLoginModal()">Sign Up / Sign In</button>
+
+                  <button class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+      
+     <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="categories.html">Categories</a>
+            <a href="shop.html">Shop</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        
+        <div class="mobile-icons">
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#"><i class="fa-regular fa-heart"></i></a>
+        </div>
+        
+        <button class="mobile-login-btn" onclick="openLoginModal()">Sign Up / Sign In</button>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+     <!-- Login Modal -->
+<div class="modal-overlay" id="loginModal">
+  <div class="login-modal">
+    <button class="close-btn" onclick="closeLoginModal()"><i class="fas fa-times"></i></button>
+
+    <div class="modal-left">
+      <img src="Group 206.png" class="logo" alt="Logo">
+      <h1>Wooden Dreams</h1>
+      <p>Welcome’s You !</p>
+      <img src="Cloud sofa three seater + ottoman_2 2.png" class="sofa" alt="Sofa Image">
+    </div>
+
+    <div class="modal-right">
+      <h2>Log In</h2>
+      <form onsubmit="return false;">
+        <input type="email" class="form-input" placeholder="Enter your Email Address" required>
+        <input type="password" class="form-input" placeholder="Enter Password" required>
+        <div class="remember-me">
+          <input type="checkbox" id="rememberMe">
+          <label for="rememberMe">Remember Me</label>
+        </div>
+        <button type="submit" class="submit-btn">Sign In</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+     <!-- Hero Section -->
+    <div class="chero-section">
+        <h1>Product Comparison</h1>
+        <div class="breadcrumb">
+            <a href="#home">Home</a> > <span style="color:#333;"> Comparison</span>
+        </div>
+    </div>
+
+
+    <section class="add-section">
+     <div class="add-container">
+        <div class="add-header">
+            <h1>Go to Product <br>page for more <br>Products<br>
+            <span>View More</span></h1>
+            
+       
+       <div class="aproduct-card">
+        <img src="Asgaard sofa 4.png">
+            <h2 class="aproduct-title">Asgaard Sofa</h2>
+            <div class="aproduct-price">Rs. 250,000.00</div>
+            <div class="aproduct-rating">
+                <span class="stars">★★★★</span>
+                <span>4.7 | 204 Review</span>
+            </div> </div>
+
+             <div class="add-product">
+            <button class="add-product-btn">Add A Product</button>
+            <div>
+                <a href="#" class="choose-product">Choose a Product<i class="fa-solid fa-chevron-down"></i></a>
+            </div>
+        </div>
+       </div>
+            
+           <div class="spec-container">
+    <div class="column">
+      <h3>General</h3>
+      <div class="row"><span>Sales Package</span><span>1 sectional sofa</span></div>
+      <div class="row"><span>Model Number</span><span>TFCBLIGRBL6SRHS</span></div>
+      <div class="row"><span>Secondary Material</span><span>Solid Wood</span></div>
+      <div class="row"><span>Configuration</span><span>L-shaped</span></div>
+
+      <h3>Dimensions</h3>
+      <div class="row"><span>Width</span><span>265.32 cm</span></div>
+      <div class="row"><span>Height</span><span>76 cm</span></div>
+      <div class="row"><span>Depth</span><span>167.76 cm</span></div>
+    </div>
+
+    <div class="column">
+      <h3>Product</h3>
+      <div class="row"><span>Filling Material</span><span>Foam</span></div>
+      <div class="row"><span>Finish Type</span><span>Bright Grey & Lion</span></div>
+      <div class="row"><span>Adjustable Headrest</span><span>No</span></div>
+      <div class="row"><span>Origin of Manufacture</span><span>India</span></div>
+
+      <h3>Warranty</h3>
+      <div class="row"><span>Warranty Summary</span><span>1 Year Manufacturing Warranty</span></div>
+      <div class="row"><span>Covered in Warranty</span><span>Warranty Against Manufacturing Defect</span></div>
+      <div class="row"><span>Domestic Warranty</span><span>1 Year</span></div>
+    </div>
+  </div>
+
+  <div class="btn-container">
+    <a href="checkout.html"><button class="sofab-btn">Buy Now</button></a>
+  </div>
+            
+</div>
+    </section>
+
+     <!-- Features Section -->
+  <section class="features" style="margin-bottom:30px;">
+    <div class="feature-item">
+      <img src="trophy 1.png" alt="">
+      <div>
+        <h4>High Quality</h4>
+        <p>crafted from top materials</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <img src="guarantee.png" alt="">
+      <div>
+        <h4>Warranty Protection</h4>
+        <p>Over 2 years</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <img src="Vectorm.png" alt="">
+      <div>
+        <h4>Free Shipping</h4>
+        <p>Order over 150 $</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <img src="Vector  k.png" alt="">
+      <div>
+        <h4>24 / 7 Support</h4>
+        <p>Dedicated support</p>
+      </div>
+    </div>
+  </section>
+
+    <!-- Footer Section -->
+<footer>
+  <div class="footer-container">
+    <!-- Left Info Block -->
+    <div class="footer-brand">
+      <img src="Group 206.png" alt="Logo">
+      <h2>Wooden Dreams</h2>
+      <p>"At Wooden Dreams, we craft furniture that brings warmth and comfort to your home. Our wooden creations are designed to inspire sweet dreams and peaceful nights. Every piece is carefully crafted to provide a haven of relaxation and tranquility. Sleep tight, dream big with Wooden Dreams."</p>
+      <div class="footer-contact">
+        <p><i class="fas fa-location-arrow"></i>Head Office 13/5, Post office oppsite, Chennai.876543</p>
+        <p><i class="fas fa-globe"></i>www.woodendreams.in</p>
+        <p><i class="fas fa-envelope"></i>woodendreams@gamil.com</p>
+      </div>
+    </div>
+
+    <!-- Center Links -->
+    <div class="footer-links">
+      <h4>LINKS</h4>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Categories</a>
+      <a href="#">Shop</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>HELP</h4>
+      <a href="#">Payment Options</a>
+      <a href="#">Returns</a>
+      <a href="#">Privacy Policies</a>
+    </div>
+
+    <!-- Right Subscription -->
+    <div class="footer-subscribe">
+      <h4>Subscribe</h4>
+      <div class="subscribe-box">
+        <input type="email" placeholder="Enter your email">
+        <button>SIGN UP</button>
+      </div>
+
+      <div class="social-icons">
+        <h4>Follow Us</h4>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-google"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    2025 Wooden Dreams, All rights reserved
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

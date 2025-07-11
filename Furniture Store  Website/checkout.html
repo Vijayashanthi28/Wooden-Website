@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+     <link rel="stylesheet" href="style.css">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <header>
+        <nav class="navbar-container">
+            <a href="#" class="logo"><img src="Group 206.png">Wooden Dreams</a>
+            <div class="nav-links">
+                <a href="" class="active"> Home </a>
+                <a href="about.html">About Us</a>
+                <a href="categories.html">Categories</a>
+                <a href="shop.html">Shop</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="icons">
+                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href=""><i class="fa-regular fa-heart"></i></a>
+            </div>
+                 <button class="login-btn" onclick="openLoginModal()">Sign Up / Sign In</button>
+
+                  <button class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+      
+     <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-nav-links">
+            <a href="index.html" >Home</a>
+            <a href="about.html">About Us</a>
+            <a href="categories.html">Categories</a>
+            <a href="shop.html"class="active">Shop</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        
+        <div class="mobile-icons">
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#"><i class="fa-regular fa-heart"></i></a>
+        </div>
+        
+        <button class="mobile-login-btn" onclick="openLoginModal()">Sign Up / Sign In</button>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+     <!-- Login Modal -->
+<div class="modal-overlay" id="loginModal">
+  <div class="login-modal">
+    <button class="close-btn" onclick="closeLoginModal()"><i class="fas fa-times"></i></button>
+
+    <div class="modal-left">
+      <img src="Group 206.png" class="logo" alt="Logo">
+      <h1>Wooden Dreams</h1>
+      <p>Welcome’s You !</p>
+      <img src="Cloud sofa three seater + ottoman_2 2.png" class="sofa" alt="Sofa Image">
+    </div>
+
+    <div class="modal-right">
+      <h2>Log In</h2>
+      <form onsubmit="return false;">
+        <input type="email" class="form-input" placeholder="Enter your Email Address" required>
+        <input type="password" class="form-input" placeholder="Enter Password" required>
+        <div class="remember-me">
+          <input type="checkbox" id="rememberMe">
+          <label for="rememberMe">Remember Me</label>
+        </div>
+        <button type="submit" class="submit-btn">Sign In</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+    
+    <div class="bhero-section">
+        <h1>Checkout</h1>
+        <div class="breadcrumb">
+            <a href="#home">Home</a> > <span style="color:#333;">Contact</span>
+        </div>
+    </div>
+  <section class="checkout-section">
+     <div class="checkout-container">
+        <h1>Billing details</h1>
+        
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName">
+        </div>
+        
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName">
+        </div>
+        
+        <div class="divider"></div>
+        
+        <h2>Company Name (Optional)</h2>
+        <div class="form-group">
+            <input type="text" id="companyName">
+        </div>
+        
+        <div class="address-section">
+            <div class="address-item">
+                 <label for="country">Country / Region</label>
+  <select class="options" id="country">
+    <option value="" disabled selected>Srilanka</option>
+    <option value="Srilanka">London</option>
+    <option value="India">India</option>
+    <option value="USA">USA</option>
+  </select>
+
+                
+            </div>
+            
+            <div class="address-item">
+                <label>Street address</label>
+                <input type="text" id="streetAddress">
+            </div>
+            
+            <div class="address-item">
+                <label>Town / City</label>
+                <input type="text" id="city">
+            </div>
+            
+            <div class="address-item">
+                <label>Province</label>
+                 <input type="text" id="zipCode">
+            </div>
+            
+            <div class="address-item">
+                <label>ZIP code</label>
+                <input type="text" id="zipCode" placeholder="Western Province">
+            </div>
+
+            <div class="address-item">
+                <label>Phone</label>
+                <input type="text" id="zipCode">
+            </div>
+            <div class="address-item">
+                <label>Email Address</label>
+                <input type="text" id="zipCode">
+            </div>
+              
+            <div class="address-item">
+                <label></label>
+                <input type="text" id="zipCode" placeholder="Additional Information">
+            </div>
+        </div></div>
+        
+        <div class="divider"></div>
+         
+        <div class="paydetails-container">
+   <h2>Product <span> Subtotal</span></h2>
+        <div class="cproduct-summary">
+            <div class="cproduct-item">
+                <span>Aggoard sofa ✗ 1</span>
+                <span>Rs. 250,000.00</span>
+            </div>
+            <div class="cproduct-item">
+                <strong>Subtotal</strong>
+                <strong>Rs. 250,000.00</strong>
+            </div>
+            <div class="cproduct-item">
+                    Total
+                <strong style="color:#B88E2F; font-size: 30px;">Rs. 250,000.00</strong>
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="payment-method">
+            <h2>● Cash On Delivery</h2>
+            <p class="payment-description">
+                Make your payment directly into our bank account. Please use your Order ID as the payment reference. 
+                Your order will not be shipped until the funds have cleared in our account.
+            </p>
+            
+            <div class="payment-option">
+                <input type="radio" id="bankTransfer" name="payment" checked>
+                <label for="bankTransfer">Direct Bank Transfer</label>
+            </div>
+            
+            <div class="payment-option">
+                <input type="radio" id="cod" name="payment">
+                <label for="cod">Cash On Delivery</label>
+            </div>
+        </div>
+        
+        <div class="privacy-policy">
+            Your personal data will be used to support your experience throughout this website, 
+            to manage access to your account, and for other purposes described in our <strong>privacy policy.</strong>
+        </div>
+        
+       <a href="confirmed.html"> <button class="place-order-btn">Place order</button></a>
+    </div></div>
+</section>
+ <!-- Features Section -->
+  <section class="features" style="margin-top:0px;">
+    <div class="feature-item">
+      <img src="trophy 1.png" alt="">
+      <div>
+        <h4>High Quality</h4>
+        <p>crafted from top materials</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <img src="guarantee.png" alt="">
+      <div>
+        <h4>Warranty Protection</h4>
+        <p>Over 2 years</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <img src="Vectorm.png" alt="">
+      <div>
+        <h4>Free Shipping</h4>
+        <p>Order over 150 $</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <img src="Vector  k.png" alt="">
+      <div>
+        <h4>24 / 7 Support</h4>
+        <p>Dedicated support</p>
+      </div>
+    </div>
+  </section>
+
+    
+<!-- Footer Section -->
+<footer>
+  <div class="footer-container">
+    <!-- Left Info Block -->
+    <div class="footer-brand">
+      <img src="Group 206.png" alt="Logo">
+      <h2>Wooden Dreams</h2>
+      <p>"At Wooden Dreams, we craft furniture that brings warmth and comfort to your home. Our wooden creations are designed to inspire sweet dreams and peaceful nights. Every piece is carefully crafted to provide a haven of relaxation and tranquility. Sleep tight, dream big with Wooden Dreams."</p>
+      <div class="footer-contact">
+        <p><i class="fas fa-location-arrow"></i>Head Office 13/5, Post office oppsite, Chennai.876543</p>
+        <p><i class="fas fa-globe"></i>www.woodendreams.in</p>
+        <p><i class="fas fa-envelope"></i>woodendreams@gamil.com</p>
+      </div>
+    </div>
+
+    <!-- Center Links -->
+    <div class="footer-links">
+      <h4>LINKS</h4>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Categories</a>
+      <a href="#">Shop</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>HELP</h4>
+      <a href="#">Payment Options</a>
+      <a href="#">Returns</a>
+      <a href="#">Privacy Policies</a>
+    </div>
+
+    <!-- Right Subscription -->
+    <div class="footer-subscribe">
+      <h4>Subscribe</h4>
+      <div class="subscribe-box">
+        <input type="email" placeholder="Enter your email">
+        <button>SIGN UP</button>
+      </div>
+
+      <div class="social-icons">
+        <h4>Follow Us</h4>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-google"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    2025 Wooden Dreams, All rights reserved
+  </div>
+</footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

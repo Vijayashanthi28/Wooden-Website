@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+     <link rel="stylesheet" href="style.css">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <header>
+        <nav class="navbar-container">
+            <a href="#" class="logo"><img src="Group 206.png">Wooden Dreams</a>
+            <div class="nav-links">
+                <a href="index.html" > Home </a>
+                <a href="about.html">About Us</a>
+                <a href="categories.html">Categories</a>
+                <a href="shop.html">Shop</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html"class="active">Contact</a>
+            </div>
+            <div class="icons">
+                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href=""><i class="fa-regular fa-heart"></i></a>
+            </div>
+                 <button class="login-btn" onclick="openLoginModal()">Sign Up / Sign In</button>
+
+                  <button class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+      
+     <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="categories.html">Categories</a>
+            <a href="shop.html">Shop</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        
+        <div class="mobile-icons">
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#"><i class="fa-regular fa-heart"></i></a>
+        </div>
+        
+        <button class="mobile-login-btn" onclick="openLoginModal()">Sign Up / Sign In</button>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+
+     <!-- Login Modal -->
+<div class="modal-overlay" id="loginModal">
+  <div class="login-modal">
+    <button class="close-btn" onclick="closeLoginModal()"><i class="fas fa-times"></i></button>
+
+    <div class="modal-left">
+      <img src="Group 206.png" class="logo" alt="Logo">
+      <h1>Wooden Dreams</h1>
+      <p>Welcome’s You !</p>
+      <img src="Cloud sofa three seater + ottoman_2 2.png" class="sofa" alt="Sofa Image">
+    </div>
+
+    <div class="modal-right">
+      <h2>Log In</h2>
+      <form onsubmit="return false;">
+        <input type="email" class="form-input" placeholder="Enter your Email Address" required>
+        <input type="password" class="form-input" placeholder="Enter Password" required>
+        <div class="remember-me">
+          <input type="checkbox" id="rememberMe">
+          <label for="rememberMe">Remember Me</label>
+        </div>
+        <button type="submit" class="submit-btn">Sign In</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+   <!-- Hero Section -->
+    <div class="chero-section">
+        <h1>Contact</h1>
+        <div class="breadcrumb">
+            <a href="#home">Home</a> > <span style="color:#ccc;">Contact</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="contact-container">
+        <div class="contact-header">
+            <h2>Get In Touch With Us</h2>
+            <p>For More Information About Our Product & Services. Please Feel Free To Drop Us An Email. Our Staff Always Be There To Help You Out. Do Not Hesitate!</p>
+        </div>
+
+        <div class="contact-content">
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <div class="info-item">
+                    <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="info-content">
+                        <h3>Address</h3>
+                        <p>236 5th SE Avenue, New York<br>NY10000, United States</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="info-content">
+                        <h3>Phone</h3>
+                        <p>Mobile: +(84) 546-6789<br>Hotline: +(84) 456-6789</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+                    <div class="info-content">
+                        <h3>Working Time</h3>
+                        <p>Monday-Friday: 9:00 - 22:00<br>Saturday-Sunday: 9:00 - 21:00</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Your name</label>
+                        <input type="text" id="name" name="name" placeholder="Abc">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" id="email" name="email" placeholder="Abc@def.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="This is an optional">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Hi! I'd like to ask about"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Section -->
+<footer>
+  <div class="footer-container">
+    <!-- Left Info Block -->
+    <div class="footer-brand">
+      <img src="Group 206.png" alt="Logo">
+      <h2>Wooden Dreams</h2>
+      <p>"At Wooden Dreams, we craft furniture that brings warmth and comfort to your home. Our wooden creations are designed to inspire sweet dreams and peaceful nights. Every piece is carefully crafted to provide a haven of relaxation and tranquility. Sleep tight, dream big with Wooden Dreams."</p>
+      <div class="footer-contact">
+        <p><i class="fas fa-location-arrow"></i>Head Office 13/5, Post office oppsite, Chennai.876543</p>
+        <p><i class="fas fa-globe"></i>www.woodendreams.in</p>
+        <p><i class="fas fa-envelope"></i>woodendreams@gamil.com</p>
+      </div>
+    </div>
+
+    <!-- Center Links -->
+    <div class="footer-links">
+      <h4>LINKS</h4>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Categories</a>
+      <a href="#">Shop</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>HELP</h4>
+      <a href="#">Payment Options</a>
+      <a href="#">Returns</a>
+      <a href="#">Privacy Policies</a>
+    </div>
+
+    <!-- Right Subscription -->
+    <div class="footer-subscribe">
+      <h4>Subscribe</h4>
+      <div class="subscribe-box">
+        <input type="email" placeholder="Enter your email">
+        <button>SIGN UP</button>
+      </div>
+
+      <div class="social-icons">
+        <h4>Follow Us</h4>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-google"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    2025 Wooden Dreams, All rights reserved
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

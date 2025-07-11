@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories Section</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+     <link rel="stylesheet" href="style.css">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <header>
+        <nav class="navbar-container">
+            <a href="#" class="logo"><img src="Group 206.png">Wooden Dreams</a>
+            <div class="nav-links">
+                <a href="index.html" > Home </a>
+                <a href="about.html">About Us</a>
+                <a href="categories.html"class="active">Categories</a>
+                <a href="shop.html">Shop</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="icons">
+                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href=""><i class="fa-regular fa-heart"></i></a>
+            </div>
+                 <button class="login-btn" onclick="openLoginModal()">Sign Up / Sign In</button>
+
+                  <button class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+      
+     <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="categories.html">Categories</a>
+            <a href="shop.html">Shop</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        
+        <div class="mobile-icons">
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#"><i class="fa-regular fa-heart"></i></a>
+        </div>
+        
+        <button class="mobile-login-btn" onclick="openLoginModal()">Sign Up / Sign In</button>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+     <!-- Login Modal -->
+<div class="modal-overlay" id="loginModal">
+  <div class="login-modal">
+    <button class="close-btn" onclick="closeLoginModal()"><i class="fas fa-times"></i></button>
+
+    <div class="modal-left">
+      <img src="Group 206.png" class="logo" alt="Logo">
+      <h1>Wooden Dreams</h1>
+      <p>Welcome’s You !</p>
+      <img src="Cloud sofa three seater + ottoman_2 2.png" class="sofa" alt="Sofa Image">
+    </div>
+
+    <div class="modal-right">
+      <h2>Log In</h2>
+      <form onsubmit="return false;">
+        <input type="email" class="form-input" placeholder="Enter your Email Address" required>
+        <input type="password" class="form-input" placeholder="Enter Password" required>
+        <div class="remember-me">
+          <input type="checkbox" id="rememberMe">
+          <label for="rememberMe">Remember Me</label>
+        </div>
+        <button type="submit" class="submit-btn">Sign In</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+ <section class="categories1-section">
+        <h1>Popular Categories</h1>
+        <p class="subtitle">Organize your space, elevate your style</p>
+<div class="categories-container">
+<div class="categories-grid"><img src="recliner.png"><span>Recliner</span></div>
+<div class="categories-grid"><img src="Rectangle 275.png"><span>Dining Set</span></div>
+<div class="categories-grid"> <img src="Rectangle 276.png"><span>Decor</span></div>
+<div class="categories-grid"> <img src="Rectangle 277 w.png"><span>Study Tables</span></div>
+<div class="categories-grid"> <img src="Rectangle 279.png"><span>Mattress</span></div>
+<div class="categories-grid">   <img src="Rectangle 278.png"><span>Bed</span></div>
+<div class="categories-grid">   <img src="Rectangle 280.png"><span>Wadrobes</span></div>
+<div class="categories-grid"><img src="Rectangle 281.png"><span>Sofa</span></div>
+<div class="categories-grid"><img src="Rectangle 266j.png"><span>Chairs</span></div>
+<div class="categories-grid"><img src="Rectangle 275 k.png"><span>Outdoor</span></div>
+<div class="categories-grid"><img src="Rectangle 276 h.png"><span>Side Table</span></div>
+<div class="categories-grid"><img src="Rectangle 277.png"><span>Dressing Table</span></div>
+<div class="categories-grid"><img src="Rectangle 266.png"><span>TV Unites</span></div>
+<div class="categories-grid"><img src="Rectangle 275 h.png"><span>Book Shelves</span></div>
+<div class="categories-grid"><img src="Rectangle 276 j.png"><span>Coffee Tables</span></div>
+<div class="categories-grid"><img src="Rectangle 277 p.png"><span>Living</span></div>
+<div class="categories-grid"><img src="Rectangle 266 w.png"><span>Patio Sets </span></div>
+<div class="categories-grid"><img src="Rectangle 275 e.png"><span>Garden Benches</span></div>
+<div class="categories-grid"><img src="Rectangle 276 r.png"><span>Hutch</span></div>
+<div class="categories-grid"><img src="Rectangle 277 q.png"><span>ArmChairs</span></div>
+</div></section>
+
+
+
+
+
+<!-- Footer Section -->
+<footer>
+  <div class="footer-container">
+    <!-- Left Info Block -->
+    <div class="footer-brand">
+      <img src="Group 206.png" alt="Logo">
+      <h2>Wooden Dreams</h2>
+      <p>"At Wooden Dreams, we craft furniture that brings warmth and comfort to your home. Our wooden creations are designed to inspire sweet dreams and peaceful nights. Every piece is carefully crafted to provide a haven of relaxation and tranquility. Sleep tight, dream big with Wooden Dreams."</p>
+      <div class="footer-contact">
+        <p><i class="fas fa-location-arrow"></i>Head Office 13/5, Post office oppsite, Chennai.876543</p>
+        <p><i class="fas fa-globe"></i>www.woodendreams.in</p>
+        <p><i class="fas fa-envelope"></i>woodendreams@gamil.com</p>
+      </div>
+    </div>
+
+    <!-- Center Links -->
+    <div class="footer-links">
+      <h4>LINKS</h4>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Categories</a>
+      <a href="#">Shop</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>HELP</h4>
+      <a href="#">Payment Options</a>
+      <a href="#">Returns</a>
+      <a href="#">Privacy Policies</a>
+    </div>
+
+    <!-- Right Subscription -->
+    <div class="footer-subscribe">
+      <h4>Subscribe</h4>
+      <div class="subscribe-box">
+        <input type="email" placeholder="Enter your email">
+        <button>SIGN UP</button>
+      </div>
+
+      <div class="social-icons">
+        <h4>Follow Us</h4>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-google"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    2025 Wooden Dreams, All rights reserved
+  </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

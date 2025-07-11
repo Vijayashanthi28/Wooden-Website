@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us </title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <header>
+        <nav class="navbar-container">
+            <a href="#" class="logo"><img src="Group 206.png">Wooden Dreams</a>
+            <div class="nav-links">
+                <a href="index.html" class="active"> Home </a>
+                <a href="about.html"class="active">About Us</a>
+                <a href="categories.html">Categories</a>
+                <a href="shop.html">Shop</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="icons">
+                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href=""><i class="fa-regular fa-heart"></i></a>
+            </div>
+                 <button class="login-btn" onclick="openLoginModal()">Sign Up / Sign In</button>
+
+                  <button class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+      
+     <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="categories.html">Categories</a>
+            <a href="shop.html">Shop</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        
+        <div class="mobile-icons">
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#"><i class="fa-regular fa-heart"></i></a>
+        </div>
+        
+        <button class="mobile-login-btn" onclick="openLoginModal()">Sign Up / Sign In</button>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+     <!-- Login Modal -->
+<div class="modal-overlay" id="loginModal">
+  <div class="login-modal">
+    <button class="close-btn" onclick="closeLoginModal()"><i class="fas fa-times"></i></button>
+
+    <div class="modal-left">
+      <img src="Group 206.png" class="logo" alt="Logo">
+      <h1>Wooden Dreams</h1>
+      <p>Welcome’s You !</p>
+      <img src="Cloud sofa three seater + ottoman_2 2.png" class="sofa" alt="Sofa Image">
+    </div>
+
+    <div class="modal-right">
+      <h2>Log In</h2>
+      <form onsubmit="return false;">
+        <input type="email" class="form-input" placeholder="Enter your Email Address" required>
+        <input type="password" class="form-input" placeholder="Enter Password" required>
+        <div class="remember-me">
+          <input type="checkbox" id="rememberMe">
+          <label for="rememberMe">Remember Me</label>
+        </div>
+        <button type="submit" class="submit-btn">Sign In</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+    <section class="about-section">
+        <h1> From Craft to Masterpiece: The Wooden Dreams<br> Journey</h1>
+        <p class="about-content">
+            At <span>Wooden Dreams,</span> we don't just create furniture - We craft experiences, blending artistry with<br>
+            precision. What began as a small family workshop has evolved into a world- class factory, rooted<br> in a passion for
+            quality and design. Each piece that leaves our doors tells a story of meticulous<br> craftsmanship, inspied by nature's harmony and the elegance
+            of modern living. <br>
+            
+            Our Journey is driven by a single belief: furniture should elevate not only spaces but also the lives<br> of those who inhabit them. From the finest 
+            materials to cutting-edge techniques, we ensure that<br>every creation excudes timeless sophiscation. 
+        </p>
+        <img src="Rectangle 281 j.png" class="about-image">
+
+         <h1> Designing Legacies : Our Philosophy of Timeless<br> Craftsmanship</h1>
+        <p class="about-content">
+            At Wooden Dreams, we believe that furniture is not merely an object; it's the heart of any space.<br> Each piece tells a story -of nature,
+            of the hand that shaped it , and the vision that brought it to, <br> life. Our philoshophy is simple yet profound: we create for those who appreciate and art of livinf<br>
+            Every detail, from the grain of wood to the final polish, reflects our dedication to impeceable<br> craftsmanship and design integrity. In our world, luxury is defined by unseen hours of effort<br>
+            that go into prefecting every line and curve.
+        </p>
+        <img src="Rectangle 282 j.png" class="about-image">
+    </section>
+    <!-- Footer Section -->
+<footer>
+  <div class="footer-container">
+    <!-- Left Info Block -->
+    <div class="footer-brand">
+      <img src="Group 206.png" alt="Logo">
+      <h2>Wooden Dreams</h2>
+      <p>"At Wooden Dreams, we craft furniture that brings warmth and comfort to your home. Our wooden creations are designed to inspire sweet dreams and peaceful nights. Every piece is carefully crafted to provide a haven of relaxation and tranquility. Sleep tight, dream big with Wooden Dreams."</p>
+      <div class="footer-contact">
+        <p><i class="fas fa-location-arrow"></i>Head Office 13/5, Post office oppsite, Chennai.876543</p>
+        <p><i class="fas fa-globe"></i>www.woodendreams.in</p>
+        <p><i class="fas fa-envelope"></i>woodendreams@gamil.com</p>
+      </div>
+    </div>
+
+    <!-- Center Links -->
+    <div class="footer-links">
+      <h4>LINKS</h4>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Categories</a>
+      <a href="#">Shop</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>HELP</h4>
+      <a href="#">Payment Options</a>
+      <a href="#">Returns</a>
+      <a href="#">Privacy Policies</a>
+    </div>
+
+    <!-- Right Subscription -->
+    <div class="footer-subscribe">
+      <h4>Subscribe</h4>
+      <div class="subscribe-box">
+        <input type="email" placeholder="Enter your email">
+        <button>SIGN UP</button>
+      </div>
+
+      <div class="social-icons">
+        <h4>Follow Us</h4>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-google"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    2025 Wooden Dreams, All rights reserved
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

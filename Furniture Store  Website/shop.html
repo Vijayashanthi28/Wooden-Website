@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+   <header>
+        <nav class="navbar-container">
+            <a href="#" class="logo"><img src="Group 206.png">Wooden Dreams</a>
+            <div class="nav-links">
+                <a href="index.html"> Home </a>
+                <a href="about.html">About Us</a>
+                <a href="categories.html">Categories</a>
+                <a href="shop.html"class="active">Shop</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="icons">
+                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href=""><i class="fa-regular fa-heart"></i></a>
+            </div>
+                 <button class="login-btn" onclick="openLoginModal()">Sign Up / Sign In</button>
+
+                  <button class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+      
+     <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="categories.html">Categories</a>
+            <a href="shop.html">Shop</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        
+        <div class="mobile-icons">
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#"><i class="fa-regular fa-heart"></i></a>
+        </div>
+        
+        <button class="mobile-login-btn" onclick="openLoginModal()">Sign Up / Sign In</button>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+     <!-- Login Modal -->
+<div class="modal-overlay" id="loginModal">
+  <div class="login-modal">
+    <button class="close-btn" onclick="closeLoginModal()"><i class="fas fa-times"></i></button>
+
+    <div class="modal-left">
+      <img src="Group 206.png" class="logo" alt="Logo">
+      <h1>Wooden Dreams</h1>
+      <p>Welcome’s You !</p>
+      <img src="Cloud sofa three seater + ottoman_2 2.png" class="sofa" alt="Sofa Image">
+    </div>
+
+    <div class="modal-right">
+      <h2>Log In</h2>
+      <form onsubmit="return false;">
+        <input type="email" class="form-input" placeholder="Enter your Email Address" required>
+        <input type="password" class="form-input" placeholder="Enter Password" required>
+        <div class="remember-me">
+          <input type="checkbox" id="rememberMe">
+          <label for="rememberMe">Remember Me</label>
+        </div>
+        <button type="submit" class="submit-btn">Sign In</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+  <div class="shero-section">
+    <h1>Shop</h1>
+    <div class="breadcrumb">
+      <a href="#home">Home</a> > <span style="color:#333;">Shop</span>
+    </div>
+  </div>
+
+
+  <section class="top-bar">
+    <div class="top-left">
+      <span class="filter-icon" onclick="openFilterModal()">
+        <i class="fa-solid fa-sliders"></i> Filter
+      </span>
+      <div class="divider"></div>
+      <span class="results">Showing 1–16 of 32 results</span>
+    </div>
+
+    <div class="top-right">
+      <label for="show">Show</label>
+      <input type="text" id="show" value="16" readonly>
+
+      <label for="sort">Short by</label>
+      <select id="sort">
+        <option>Default</option>
+        <option>Price</option>
+        <option>Popularity</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- Filter Modal -->
+  <div class="modal-overlay" id="filterModal">
+    <div class="filter-modal">
+      <div class="modal-header">
+        <div class="modal-title">
+        <i class="fa-solid fa-filter" style="color: #B88E2F;"></i> 
+          Filter
+        </div>
+        <button class="close-btn" onclick="closeFilterModal()">
+          <i class="fa-solid fa-times"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Sort By Section -->
+        <div class="filter-section">
+          <div class="section2-title ">Sort By</div>
+          <div class="filter-options">
+            <div class="filter-option">
+              <label for="best-seller">Best Seller</label>
+            </div>
+            <div class="filter-option">
+             
+              <label for="price-high-low">Price (High to Low)</label>
+            </div>
+            <div class="filter-option">
+            
+              <label for="price-low-high">Price (Low to High)</label>
+            </div>
+            <div class="filter-option">
+             
+              <label for="product-name">Product Name (A to Z)</label>
+            </div>
+            <div class="filter-option">
+            
+              <label for="recommended">Recommended</label>
+            </div>
+            <div class="filter-option">
+              
+              <label for="default">Default</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Material Section -->
+        <div class="filter-section">
+          <div class="section2-title ">Material</div>
+          <div class="filter-options">
+            <div class="filter-option">
+            
+              <label for="leatherette">Leatherette</label>
+            </div>
+            <div class="filter-option">
+           
+              <label for="half-leather">Half Leather</label>
+            </div>
+            <div class="filter-option">
+            
+              <label for="foam">Foam</label>
+            </div>
+            <div class="filter-option">
+             
+              <label for="sheesham">Sheesham</label>
+            </div>
+            <div class="filter-option">
+         
+              <label for="solid-wood">Solid Wood</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Country Collection Section -->
+        <div class="filter-section">
+          <div class="section2-title ">Country Collection</div>
+          <div class="filter-options">
+            <div class="filter-option">
+             
+              <label for="american">American Collection</label>
+            </div>
+            <div class="filter-option">
+              
+              <label for="indian">Indian Collection</label>
+            </div>
+            <div class="filter-option">
+             
+              <label for="tamilnadu">Tamilnadu Collection</label>
+            </div>
+            <div class="filter-option">
+             
+              <label for="emperor">Emperor Collection</label>
+            </div>
+            <div class="filter-option">
+             
+              <label for="italian">Italian Collection</label>
+            </div>
+            <div class="filter-option">
+          
+              <label for="malaysian">Malaysian Collection</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Seating Capacity Section -->
+        <div class="filter-section">
+          <div class="section2-title ">Seating Capacity</div>
+          <div class="filter-options">
+            <div class="filter-option">
+            
+              <label for="1-seater">1 seater</label>
+            </div>
+            <div class="filter-option">
+            
+              <label for="2-seater">2 seater</label>
+            </div>
+            <div class="filter-option">
+            
+              <label for="3-seater">3 seater</label>
+            </div>
+            <div class="filter-option">
+          
+              <label for="set">Set</label>
+            </div>
+            <div class="filter-option">
+             
+              <label for="5plus-seater">5+ seater</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Price Range Section -->
+        <div class="filter-section">
+          <div class="section2-title ">Price</div>
+          <div class="price-range">
+            <div class="price-inputs">
+              <input type="number" class="price-input" id="minPrice" placeholder="₹26,000" min="26000" max="70000">
+              <input type="number" class="price-input" id="maxPrice" placeholder="₹70,000" min="26000" max="70000">
+            </div>
+            <input type="range" class="price-slider" id="priceSlider" min="26000" max="70000" value="50000">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Shop Section -->
+  <section class="shop-section">
+    <h2>Shop By Categories</h2>
+    <div class="shop-title">
+      <h1>Best Sellars</h1>
+      <p>Our Most Loved Pieces</p>
+    </div>
+
+    <div class="shop-grid">
+      <!-- Product 1 -->
+      <div class="shop-card">
+        <div class="image-box">
+          <img src="image 1h.png" alt="product">
+          <span class="discount">-30%</span>
+        </div>
+        <div class="shop-info">
+          <h3>Syltherine</h3>
+          <p>Stylish cafe chair</p>
+          <div class="price1">
+            <span>Rp 2.500.000</span>
+            <del>Rp 3.500.000</del>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="shop-card">
+        <div class="image-box">
+          <img src="image 3.png" alt="product">
+          <span class="discount">-50%</span>
+        </div>
+        <div class="shop-info">
+          <h3>Lolito</h3>
+          <p>Luxury big sofa</p>
+          <div class="sprice">
+            <span>Rp 7.000.000</span>
+            <del>Rp 14.000.000</del>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="shop-card">
+        <div class="image-box">
+          <img src="image 7.png" alt="product">
+          <span class="discount">-50%</span>
+        </div>
+        <div class="shop-info">
+          <h3>Pingky</h3>
+          <p>Cute bed set</p>
+          <div class="sprice">
+            <span>Rp 7.000.000</span>
+            <del>Rp 14.000.000</del>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4-->
+      <div class="shop-card">
+        <div class="image-box">
+          <img src="Images q.png" alt="product">
+          <span class="discount">-45%</span>
+        </div>
+        <div class="shop-info">
+          <h3>Grifo</h3>
+          <p>Night Lamp</p>
+          <div class="sprice">
+            <span>Rp 1,500,000</span>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="shop-card">
+        <div class="image-box">
+          <img src="image 2 h.png" alt="product">
+          <span class="discount">-45%</span>
+        </div>
+        <div class="shop-info">
+          <h3>Leviosa</h3>
+          <p>Stylish Cafe Chair</p>
+          <div class="sprice">
+            <span>Rp 2,500,000</span>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="shop-card">
+        <div class="image-box">
+          <img src="Rectangle 286 p.png" alt="product">
+          <span class="discount">-45%</span>
+        </div>
+        <div class="shop-info">
+          <h3>Patio</h3>
+          <p>Cute Bed Set</p>
+          <div class="sprice">
+            <span>Rp 7.000.000</span>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="shop-card">
+        <div class="image-box">
+          <img src="Rectangle 286 q.png" alt="product">
+          <span class="discount">-45%</span>
+        </div>
+        <div class="shop-info">
+          <h3>Patio</h3>
+          <p>Cute Bed Set</p>
+          <div class="sprice">
+            <span>Rp 7.000.000</span>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="shop-card">
+        <div class="image-box">
+          <img src="Group 206 h.png" alt="product">
+          <span class="discount">-45%</span>
+        </div>
+        <div class="shop-info">
+          <h3>Patio</h3>
+          <p>Cute Bed Set</p>
+          <div class="sprice">
+            <span>Rp 7.000.000</span>
+
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Product 9 -->
+      <div class="shop-card">
+        <div class="image-box">
+          <img src="Rectangle 286 a.png" alt="product">
+          <span class="discount">-45%</span>
+        </div>
+        <div class="shop-info">
+          <h3>Patio</h3>
+          <p>Cute Bed Set</p>
+          <div class="sprice">
+            <span>Rp 7.000.000</span>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="add-to-cart-modal" id="addToCartModal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div class="modal-product">
+        <div class="modal-image">
+          <img id="modalProductImage" src="" alt="Product Image">
+        </div>
+        <div class="modal-info">
+          <h3 id="modalProductName"></h3>
+          <p id="modalProductDescription"></p>
+          <div class="modal-price">
+            <span id="modalProductPrice"></span>
+            <del id="modalProductOldPrice"></del>
+          </div>
+          <div class="quantity-selector">
+            <button class="quantity-btn minus">-</button>
+            <input type="number" value="1" min="1" class="quantity-input">
+            <button class="quantity-btn plus">+</button>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+          <div class="modal-actions">
+            <a href="#" class="share-btn"><i class="fa-solid fa-share-nodes"></i>Share</a>
+            <a href="#" class="share-btn"> <i class="fa-solid fa-sliders"></i>Quick View</a>
+            <a href="#" class="like-btn"><i class="fa-regular fa-heart"></i>Like</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature-item">
+      <img src="trophy 1.png" alt="">
+      <div>
+        <h4>High Quality</h4>
+        <p>crafted from top materials</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <img src="guarantee.png" alt="">
+      <div>
+        <h4>Warranty Protection</h4>
+        <p>Over 2 years</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <img src="Vectorm.png" alt="">
+      <div>
+        <h4>Free Shipping</h4>
+        <p>Order over 150 $</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <img src="Vector  k.png" alt="">
+      <div>
+        <h4>24 / 7 Support</h4>
+        <p>Dedicated support</p>
+      </div>
+    </div>
+  </section>
+  <!-------------New Arrivals-->
+  <!-- Shop Section -->
+  <section class="shop-section">
+
+    <div class="shop-title">
+      <h1>New Arrivals</h1>
+      <p>Discover What's New</p>
+    </div>
+
+    <div class="shop-grid">
+      <!-- Product 1 -->
+      <div class="shop-card">
+        <div class="image-box">
+          <img src="Images i.png" alt="product">
+          <span class="discount" style="background-color: #2EC1AC;">New</span>
+        </div>
+        <div class="shop-info">
+          <h3>Respira</h3>
+          <p>Outdoor bar table and stool</p>
+          <div class="price1">
+            <span>Rp 500,000</span>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="shop-card">
+        <div class="image-box">
+          <img src="image 6 8.png" alt="product">
+          <span class="discount" style="background-color: #2EC1AC;">New</span>
+        </div>
+        <div class="shop-info">
+          <h3>Muggo</h3>
+          <p>Small Mug</p>
+          <div class="price1">
+            <span>Rp 150,000</span>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="shop-card">
+        <div class="image-box">
+          <img src="Images j.png" alt="product">
+          <span class="discount" style="background-color: #2EC1AC;">New</span>
+        </div>
+        <div class="shop-info">
+          <h3>Potty</h3>
+          <p>Minimalist flower pot</p>
+          <div class="price1">
+            <span>Rp 500,000</span>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="shop-card" >
+       <a href="sofa.html"style="text-decoration: none; color:#000;""><div class="image-box">
+          <img src="th 1 j.png" alt="product">
+          <span class="discount" style="background-color: #2EC1AC;">New</span>
+        </div>
+        <div class="shop-info">
+         <h3 >Assgard Sofa</h3>
+          <p>Outdoor bar table and stool</p>
+          <div class="price1">
+            <span>Rp 25,000,00</span></a>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="shop-card">
+        <div class="image-box">
+          <img src="Rectangle 286 j.png" alt="product">
+          <span class="discount" style="background-color: #2EC1AC;">New</span>
+        </div>
+        <div class="shop-info">
+          <h3>Patio</h3>
+          <p>Cute Bed Set</p>
+          <div class="price1">
+            <span>Rp 7.000.000</span>
+
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Product 6 -->
+      <div class="shop-card">
+        <div class="image-box">
+          <img src="Rectangle 286 0.png" alt="product">
+          <span class="discount" style="background-color: #2EC1AC;">New</span>
+        </div>
+        <div class="shop-info">
+          <h3>Patio</h3>
+          <p>Cute Bed Set</p>
+          <div class="price1">
+            <span>Rp 7.000.000</span>
+
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Product 7 -->
+      <div class="shop-card">
+        <div class="image-box">
+          <img src="patio 1.png" alt="product">
+
+        </div>
+        <div class="shop-info">
+          <h3>Patio</h3>
+          <p>Cute Bed Set</p>
+          <div class="price1">
+            <span>Rp 7.000.000</span>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="shop-card">
+        <div class="image-box">
+          <img src="patio 2.png" alt="product">
+
+        </div>
+        <div class="shop-info">
+          <h3>Patio</h3>
+          <p>Cute Bed Set</p>
+          <div class="price1">
+            <span>Rp 7.000.000</span>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 9 -->
+      <div class="shop-card">
+        <div class="image-box">
+          <img src="patio 3.png" alt="product">
+
+        </div>
+        <div class="shop-info">
+          <h3>Patio</h3>
+          <p>Cute Bed Set</p>
+          <div class="price1">
+            <span>Rp 7.000.000</span>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="shop-section">
+
+    <div class="shop-title">
+      <h1>Recently Viewed</h1>
+    </div>
+    <div class="product-container">
+
+      <!-- Card 1 -->
+      <div class="vproduct-card">
+        <div class="image-wrapper">
+          <img src="image 1h.png" alt="product">
+          <span class="badge discount">-30%</span>
+        </div>
+        <div class="vproduct-info">
+          <h3>Syltherine</h3>
+          <p>Stylish cafe chair</p>
+          <div class="price">
+            <span class="current">Rp 2.500.000</span>
+            <span class="old">Rp 3.500.000</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="vproduct-card">
+        <div class="image-wrapper">
+          <img src="image 2 h.png" alt="product">
+        </div>
+        <div class="vproduct-info">
+          <h3>Leviosa</h3>
+          <p>Stylish cafe chair</p>
+          <div class="price">
+            <span class="current">Rp 2.500.000</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="vproduct-card">
+        <div class="image-wrapper">
+          <img src="Images i.png" alt="product">
+          <span class="badge new">New</span>
+        </div>
+        <div class="vproduct-info">
+          <h3>Respira</h3>
+          <p>Outdoor bar table and stool</p>
+          <div class="price">
+            <span class="current">Rp 500.000</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="vproduct-card">
+        <div class="image-wrapper">
+          <img src="view patio.png" alt="Patio">
+        </div>
+        <div class="vproduct-info">
+          <h3>Patio</h3>
+          <p>Cute bed set</p>
+          <div class="price">
+            <span class="current">Rp 7.000.000</span>
+            <span class="old">Rp 14.000.000</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination">
+      <button class="active">1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>Next</button>
+    </div>
+  </section>
+
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-container">
+      <!-- Left Info Block -->
+      <div class="footer-brand">
+        <img src="Group 206.png" alt="Logo">
+        <h2>Wooden Dreams</h2>
+        <p>"At Wooden Dreams, we craft furniture that brings warmth and comfort to your home. Our wooden creations are
+          designed to inspire sweet dreams and peaceful nights. Every piece is carefully crafted to provide a haven of
+          relaxation and tranquility. Sleep tight, dream big with Wooden Dreams."</p>
+        <div class="footer-contact">
+          <p><i class="fas fa-location-arrow"></i>Head Office 13/5, Post office oppsite, Chennai.876543</p>
+          <p><i class="fas fa-globe"></i>www.woodendreams.in</p>
+          <p><i class="fas fa-envelope"></i>woodendreams@gamil.com</p>
+        </div>
+      </div>
+
+      <!-- Center Links -->
+      <div class="footer-links">
+        <h4>LINKS</h4>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Categories</a>
+        <a href="#">Shop</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+      </div>
+
+      <div class="footer-links">
+        <h4>HELP</h4>
+        <a href="#">Payment Options</a>
+        <a href="#">Returns</a>
+        <a href="#">Privacy Policies</a>
+      </div>
+
+      <!-- Right Subscription -->
+      <div class="footer-subscribe">
+        <h4>Subscribe</h4>
+        <div class="subscribe-box">
+          <input type="email" placeholder="Enter your email">
+          <button>SIGN UP</button>
+        </div>
+
+        <div class="social-icons">
+          <h4>Follow Us</h4>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-google"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      2025 Wooden Dreams, All rights reserved
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

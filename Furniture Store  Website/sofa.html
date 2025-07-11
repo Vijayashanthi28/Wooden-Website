@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asgaard Sofa - Wooden Dreams</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+     <link rel="stylesheet" href="style.css">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <header>
+        <nav class="navbar-container">
+            <a href="#" class="logo"><img src="Group 206.png">Wooden Dreams</a>
+            <div class="nav-links">
+                <a href="index.html" class="active"> Home </a>
+                <a href="about.html">About Us</a>
+                <a href="categories.html">Categories</a>
+                <a href="shop.html"class="active">Shop</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="icons">
+                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href=""><i class="fa-regular fa-heart"></i></a>
+            </div>
+                 <button class="login-btn" onclick="openLoginModal()">Sign Up / Sign In</button>
+
+                  <button class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+      
+     <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="categories.html">Categories</a>
+            <a href="shop.html">Shop</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        
+        <div class="mobile-icons">
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#"><i class="fa-regular fa-heart"></i></a>
+        </div>
+        
+        <button class="mobile-login-btn" onclick="openLoginModal()">Sign Up / Sign In</button>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+     <!-- Login Modal -->
+<div class="modal-overlay" id="loginModal">
+  <div class="login-modal">
+    <button class="close-btn" onclick="closeLoginModal()"><i class="fas fa-times"></i></button>
+
+    <div class="modal-left">
+      <img src="Group 206.png" class="logo" alt="Logo">
+      <h1>Wooden Dreams</h1>
+      <p>Welcome’s You !</p>
+      <img src="Cloud sofa three seater + ottoman_2 2.png" class="sofa" alt="Sofa Image">
+    </div>
+
+    <div class="modal-right">
+      <h2>Log In</h2>
+      <form onsubmit="return false;">
+        <input type="email" class="form-input" placeholder="Enter your Email Address" required>
+        <input type="password" class="form-input" placeholder="Enter Password" required>
+        <div class="remember-me">
+          <input type="checkbox" id="rememberMe">
+          <label for="rememberMe">Remember Me</label>
+        </div>
+        <button type="submit" class="submit-btn">Sign In</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb1">
+        <div class="breadcrumb1-container">
+            <a href="#">Home</a>
+            <span class="separator">></span>
+            <a href="#">Shop</a>
+            <span class="separator">></span>
+            <span class="current">Asgaard sofa</span>
+        </div>
+    </nav>
+
+    <!-- Product Section -->
+    <section class="sofa-section">
+        <!-- Product Images -->
+        <div class="sofa-images">
+            <div class="sofa-image">
+                <img src="Group 285.png" alt="Asgaard Sofa">
+            </div>
+        </div>
+
+        <!-- Product Details -->
+        <div class="sofa-details">
+            <h1>Asgaard sofa</h1>
+            <div class="sofa-price">Rs. 250,000.00</div>
+            
+            <div class="sofa-rating">
+                <div class="sofa-stars">
+                    <span class="star1">★</span>
+                    <span class="star1">★</span>
+                    <span class="star1">★</span>
+                    <span class="star1">★</span>
+                    <span class="star1 half">★</span>
+                </div>
+                <span class="rating-text">5 Customer Review</span>
+            </div>
+
+            <p class="sofa-description">
+                Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.
+            </p>
+
+            <div class="sofa-options">
+                <div class="option-group">
+                    <label class="option-label">Size</label>
+                    <div class="size-options">
+                        <div class="size-option active" onclick="selectSize(this)">L</div>
+                        <div class="size-option" onclick="selectSize(this)">XL</div>
+                        <div class="size-option" onclick="selectSize(this)">XS</div>
+                    </div>
+                </div>
+
+                <div class="option-group">
+                    <label class="option-label">Color</label>
+                    <div class="color-options">
+                        <div class="color-option color-purple active" onclick="selectColor(this)" data-color="purple"></div>
+                        <div class="color-option color-black" onclick="selectColor(this)" data-color="black"></div>
+                        <div class="color-option color-gold" onclick="selectColor(this)" data-color="gold"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sofa-actions">
+                <div class="quantity-selector">
+                    <button class="quantity-btn" onclick="decreaseQuantity()">-</button>
+                    <input type="number" class="quantity-input" id="quantityInput" value="1" min="1" max="99" readonly>
+                    <button class="quantity-btn" onclick="increaseQuantity()">+</button>
+                </div>
+                <button class="action-btn" onclick="addToCart()">Add To Cart</button>
+               <a href="checkout.html"><button class="action-btn buy-now-btn" onclick="buyNow()">Buy Now</button></a> 
+            </div>
+
+            <div class="product-meta">
+                <div class="meta-item">
+                    <span class="meta-label">SKU</span>
+                    <span class="meta-value">SS001</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Category</span>
+                    <span class="meta-value">Sofas</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Tags</span>
+                    <span class="meta-value">
+                        <a href="#">Sofa</a>
+                        <a href="#">Chair</a>
+                        <a href="#">Home</a>
+                        <a href="#">Shop</a>
+                    </span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Share</span>
+                    <div class="social-share">
+                        <a href="#" class="social-btn" onclick="shareOn('facebook')">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-btn" onclick="shareOn('linkedin')">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-btn" onclick="shareOn('twitter')">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="tab-container">
+  <div class="tabs">
+    <span class="active">Description</span>
+    <a href="add.html"style="text-decoration: none;"><span >Additional Information</span></a>
+    <span>Reviews [5]</span>
+  </div>
+
+  <div class="tab-content">
+    <p>
+      Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering.
+      Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact,
+      stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended
+      highs for a sound that is both articulate and pronounced. The analogue knobs allow you to
+      fine tune the controls to your personal preferences while the guitar-influenced leather
+      strap enables easy and stylish travel.
+    </p>
+
+    <div class="tab-image">
+      <img src="Asgaard sofa 4.png" alt="Product Image">
+    </div>
+  </div>
+</div>
+
+<div class="related-section">
+  <h2>Related Products</h2>
+
+  <div class="related-grid">
+
+    <div class="related-card">
+      <img src="image 1h.png" alt="Syltherine">
+      <div class="badge">-30%</div>
+      <div class="related-info">
+        <h4>Syltherine</h4>
+        <p>Stylish cafe chair</p>
+        <div class="price">Rp 2.500.000 <del>Rp 3.500.000</del></div>
+      </div>
+    </div>
+
+    <div class="related-card">
+      <img src="image 2 h.png" alt="Leviosa">
+      <div class="related-info">
+        <h4>Leviosa</h4>
+        <p>Stylish cafe chair</p>
+        <div class="price">Rp 2.500.000</div>
+      </div>
+    </div>
+
+    <div class="related-card">
+      <img src="image 3.png" alt="Lolito">
+      <div class="badge">-50%</div>
+      <div class="related-info">
+        <h4>Lolito</h4>
+        <p>Luxury big sofa</p>
+        <div class="price">Rp 7.000.000 <del>Rp 14.000.000</del></div>
+      </div>
+    </div>
+
+    <div class="related-card">
+      <img src="Images.png" alt="Respira">
+      <div class="badge new">New</div>
+      <div class="related-info">
+        <h4>Respira</h4>
+        <p>Outdoor bar table and stool</p>
+        <div class="price">Rp 500.000</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="show-more">
+    <button>Show More</button>
+  </div>
+</div>
+
+<!-- Footer Section -->
+<footer>
+  <div class="footer-container">
+    <!-- Left Info Block -->
+    <div class="footer-brand">
+      <img src="Group 206.png" alt="Logo">
+      <h2>Wooden Dreams</h2>
+      <p>"At Wooden Dreams, we craft furniture that brings warmth and comfort to your home. Our wooden creations are designed to inspire sweet dreams and peaceful nights. Every piece is carefully crafted to provide a haven of relaxation and tranquility. Sleep tight, dream big with Wooden Dreams."</p>
+      <div class="footer-contact">
+        <p><i class="fas fa-location-arrow"></i>Head Office 13/5, Post office oppsite, Chennai.876543</p>
+        <p><i class="fas fa-globe"></i>www.woodendreams.in</p>
+        <p><i class="fas fa-envelope"></i>woodendreams@gamil.com</p>
+      </div>
+    </div>
+
+    <!-- Center Links -->
+    <div class="footer-links">
+      <h4>LINKS</h4>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Categories</a>
+      <a href="#">Shop</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>HELP</h4>
+      <a href="#">Payment Options</a>
+      <a href="#">Returns</a>
+      <a href="#">Privacy Policies</a>
+    </div>
+
+    <!-- Right Subscription -->
+    <div class="footer-subscribe">
+      <h4>Subscribe</h4>
+      <div class="subscribe-box">
+        <input type="email" placeholder="Enter your email">
+        <button>SIGN UP</button>
+      </div>
+
+      <div class="social-icons">
+        <h4>Follow Us</h4>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-google"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    2025 Wooden Dreams, All rights reserved
+  </div>
+</footer>
+
+    
+<script src="script.js"></script>
+</body>
+</html>
